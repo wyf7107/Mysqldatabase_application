@@ -1,0 +1,14 @@
+<!-- author ben lawson (balawson@bu.edu) -->
+<!doctype html>
+<title>My Tag Photos</title>
+{% if photos %}
+<h2>Here's your photos</h2>
+    <ul>
+    {% for photo in photos %}
+        <li>{{photo[2]}}<br>
+        <img src='data:image/png;base64, {{photo[0]}}'/></li>
+    {% endfor %}
+    </ul>
+{% endif %}
+<ul>
+</ul>

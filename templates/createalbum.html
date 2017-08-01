@@ -1,0 +1,19 @@
+<!-- author ben lawson balawson@bu.edu -->
+<head>
+    <title>Create an album!</title>
+</head>
+    <body>
+        <div class="title">
+            <h1>Enter album information below</h1>
+        </div>
+        <div id="content">
+            <form method="post" action="{{ url_for('register_album') }}">
+                <label for="albumname">Enter album name(required):</label>
+                <input type="albumname" name="albumname" required/><br />
+                <label for="dateofcreation">Enter the date of creation(required):</label>
+                <input type="dateofcreation" name="dateofcreation" required/><br />
+                <input type="submit" />
+            </form>
+         </div>
+    </body>
+<a href='/'>Home</a>

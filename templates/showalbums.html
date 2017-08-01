@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Brilliant Webpage!</title>
+<h1>Welcome!</h1>
+</head>
+<body>
+	{% if data%}
+	<h4>Here's the data!</h4>
+	<ul>
+		{% for row in data %}
+			<li>
+			{% for item in row %}
+			[{{item}}]
+			{% endfor %}
+			</li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+<li><a href='/'>Home</a></li>
+<li><a href='/createalbum'>Create a new album </a></li>
+<li><a href='/upload'>Upload a photo</a> </li>
+<li><a href='/deletephoto'>Delete a photo</a> </li>
+<li><a href='/deletealbum'>Delete a album</a> </li>
+
+
+</body>
+</html>

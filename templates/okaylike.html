@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<title>Congrats</title>
+<html>
+<body>
+	<h2>You have successfully liked the photo!</h2>
+	{% if photoid %}
+	<h2>Photo Id: {{photoid}}</h2>
+	{% endif %}
+
+	{% if numlike%}
+	<h2>Number of Likes for this photo: {{numlike}}</h2>
+	{% endif %}
+
+	{% if likelist%}
+	    <ul>
+	    {% for user in likelist %}
+
+	        <li>{{user}}<br>
+	        </li>
+	    {% endfor %}
+	    </ul>
+	{% endif %}
+
+	<li><a href='/browse'>Back</a></li>
+</body>
+</html>

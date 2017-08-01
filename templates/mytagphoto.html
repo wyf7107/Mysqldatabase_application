@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>My Tags!</title>
+<h1>Welcome!</h1>
+</head>
+<body>
+	{% if data and query%}
+	<h4>Here're the Tags!</h4>
+	<ul>
+		{% for row in data %}
+			<li>
+			{% for item in row %}
+			<a href ='/usertagdetail/{{item}}'>[{{item}}]</a>
+			{% endfor %}
+			</li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+
+	{% if query and error %}
+		<p> There was an error with the query: {{query}} </p>
+	{% endif %}
+<li><a href='/generalTag'>Back</a></li>
+</body>
+</html>

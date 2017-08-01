@@ -1,0 +1,39 @@
+<!-- author ben lawson (balawson@bu.edu) -->
+<!doctype html>
+{% if message %}
+  <h4>{{message}}!</h4>
+{% endif %}
+<title>Photoshare</title>
+{% if name %}
+  <h1>Hello {{ name }}!</h1>
+{% endif %}
+
+{% if photos %}
+<h2>Here's your photos</h2>
+    <ul>
+    {% for photo in photos %}
+
+        <li>{{photo[2]}}<br>
+        <img src='data:image/png;base64, {{photo[0]}}'/></li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+{% if message is none %}
+  <p>You should <a href='/login'>login!</a></p>
+{% else %}
+  <p> Go to <a href='/profile'>profile?</a></p>
+{% endif %}
+
+<ul>
+<li><a href='/browse'>Browse ALl Public Photos</a> </li>
+<li><a href='/showalbum'>Albums</a> </li>
+<li><a href='/generalFriend'>Search/Friend</a></li>
+<li><a href='/generalTag'>Tags</a></li>
+<li><a href='/photosearch'>Search Photos by Tags</a></li>
+<li><a href='/comment'>Leave a Comment</a></li>
+<li><a href='/recommandation'>You may also like</a></li>
+<li><a href='/greatuser'>User Activity</a></li>
+<li><a href='/logout'>Logout</a></li>
+<li><a href='/'>Home</a></li>
+</ul>

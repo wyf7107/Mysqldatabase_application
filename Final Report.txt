@@ -1,0 +1,7 @@
+Final report for PA1
+Yifan Wang(U78152250)
+
+//The app.py is run under a virtual environment of python 2.7
+//Search photos by tag only supports maximium 4 tags
+//Comment has not been set up visible
+//Need more UI designs

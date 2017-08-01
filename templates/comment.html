@@ -1,0 +1,21 @@
+<!-- author ben lawson balawson@bu.edu -->
+<head>
+    <title>Leave a Comment!</title>
+</head>
+    <body>
+        <div class="title">
+            <h1>Enter comment information below</h1>
+        </div>
+        <div id="content">
+            <form method="post" action="{{ url_for('register_comment') }}">
+                <label for="picture_id">Enter picture_id(required):</label>
+                <input type="picture_id" name="picture_id" required/><br />
+                <label for="content">Enter content(required):</label>
+                <input type="content" name="content" required/><br />
+                <label for="doc">Enter date(required):</label>
+                <input type="doc" name="doc" placeholder="eg.2016-10-31" required/><br />
+                <input type="submit" />
+            </form>
+         </div>
+    </body>
+<a href='/'>Home</a>

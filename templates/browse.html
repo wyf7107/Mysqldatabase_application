@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Brilliant Webpage!</title>
+<h1>Welcome!</h1>
+</head>
+{% if photos %}
+<h2>Here's all photos</h2>
+    <ul>
+    {% for photo in photos %}
+
+        <li>{{photo[2]}},photo_id:{{photo[1]}}<br>
+        <img src='data:image/png;base64, {{photo[0]}}'/><br>
+        <a href = '/likephoto/{{photo[1]}}'>Like This Photo!</a><br>
+        <a href = '/seelikelist/{{photo[1]}}'>See whoelse likes this photo!</a></li>
+        <br>
+    {% endfor %}
+    </ul>
+{% endif %}
+<li><a href='/'>home</a></li>
+</body>
+</html>
